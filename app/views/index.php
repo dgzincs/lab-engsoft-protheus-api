@@ -7,8 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-gray-50">
-
-    <!-- Header -->
     <nav class="bg-white shadow-sm border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-14 items-center">
@@ -28,9 +26,6 @@
             </div>
         </div>
     </nav>
-
-
-    <!-- Conteúdo principal -->
     <div class="max-w-7xl mx-auto p-6">
         <!-- Cards Resumo -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -47,8 +42,6 @@
                 <p class="text-2xl font-semibold text-gray-900 mt-2"><?= $last_client ?></p>
             </div>
         </div>
-
-        <!-- Tabela de Clientes -->
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-x-auto">
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-50">
@@ -64,13 +57,13 @@
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
                  <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">..</td>
-                    <td class="px-6 py-4 whitespace-nowrap">..</td>
-                    <td class="px-6 py-4 whitespace-nowrap">..</td>
-                    <td class="px-6 py-4 whitespace-nowrap">..</td>
-                    <td class="px-6 py-4 whitespace-nowrap">..</td>
-                    <td class="px-6 py-4 whitespace-nowrap">..</td>
-                    <td class="px-6 py-4 whitespace-nowrap">..</td>
+                    <td class="px-6 py-4 whitespace-nowrap">...</td>
+                    <td class="px-6 py-4 whitespace-nowrap">...</td>
+                    <td class="px-6 py-4 whitespace-nowrap">...</td>
+                    <td class="px-6 py-4 whitespace-nowrap">...</td>
+                    <td class="px-6 py-4 whitespace-nowrap">...</td>
+                    <td class="px-6 py-4 whitespace-nowrap">...</td>
+                    <td class="px-6 py-4 whitespace-nowrap">...</td>
                   </tr>
                 </tbody>
             </table>

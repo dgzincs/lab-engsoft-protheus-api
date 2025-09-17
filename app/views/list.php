@@ -7,8 +7,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-gray-50">
-
-  <!-- Menu de Navegação Minimalista -->
   <nav class="bg-white shadow-sm border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-14 items-center">
@@ -17,8 +15,6 @@
           <div class="w-8 h-8 bg-blue-600 text-white flex items-center justify-center rounded-lg font-bold">S</div>
           <span class="font-semibold text-gray-900 text-lg">MicroSAP</span>
         </div>
-
-        <!-- Menu -->
         <div class="flex items-center space-x-2">
           <a href="/" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-white hover:bg-blue-600 transition-colors">Início</a>
           <a href="/clients/new" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-white hover:bg-blue-600 transition-colors">Cadastros</a>
@@ -28,8 +24,6 @@
       </div>
     </div>
   </nav>
-
-  <!-- Conteúdo Principal -->
   <div class="max-w-7xl mx-auto p-6">
   	<form method="get" action="/clients/search">
   		<div class="flex items-center space-x-2">
@@ -42,17 +36,11 @@
   	</form>
 		</div>
 
-
-
     <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-x-auto">
-      
-      <!-- Cabeçalho da Tabela -->
       <div class="px-6 py-4 border-b border-gray-200">
         <h1 class="text-2xl font-semibold text-gray-900">Lista de Clientes</h1>
         <p class="text-sm text-gray-600 mt-1">Visualize os clientes cadastrados no sistema</p>
       </div>
-
-      <!-- Tabela -->
 	      <table class="min-w-full divide-y divide-gray-200">
 	    <thead class="bg-gray-50">
 	      <tr>
@@ -110,9 +98,7 @@
 		        </tr>
 		    <?php endforeach; ?>
 		</tbody>
-
     </div>
   </div>
-
 </body>
 </html>

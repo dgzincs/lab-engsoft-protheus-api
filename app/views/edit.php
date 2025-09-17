@@ -36,7 +36,6 @@
 
             <div class="p-6">
                 <form method="POST" action="/clients/<?= $client['id'] ?>" onsubmit="return confirm('Deseja realmente atualizar este cliente?')">
-                    <!-- Dados Básicos -->
                     <div class="mb-8">
                         <h2 class="text-lg font-medium text-gray-900 mb-4">Dados Básicos</h2>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -59,8 +58,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Identificação -->
                     <div class="mb-8">
                         <h2 class="text-lg font-medium text-gray-900 mb-4">Identificação</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -78,8 +75,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Endereço -->
                     <div class="mb-8">
                         <h2 class="text-lg font-medium text-gray-900 mb-4">Endereço</h2>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -109,8 +104,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Contato -->
                     <div class="mb-8">
                         <h2 class="text-lg font-medium text-gray-900 mb-4">Contato</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -134,8 +127,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Informações Adicionais -->
                     <div class="mb-8">
                         <h2 class="text-lg font-medium text-gray-900 mb-4">Informações Adicionais</h2>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -147,8 +138,6 @@
                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                        value="<?= htmlspecialchars($client['opening_date'] ?? '', ENT_QUOTES) ?>"/>
                             </div>
-
-                            <!-- Finalidade -->
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Finalidade</label>
                                 <select id="finalidade" name="finalidade" 
