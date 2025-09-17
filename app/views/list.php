@@ -31,13 +31,15 @@
 
   <!-- Conteúdo Principal -->
   <div class="max-w-7xl mx-auto p-6">
-	  	<div class="flex items-center space-x-2">
+  	<form method="get" action="/clients/search">
+  		<div class="flex items-center space-x-2">
 		  <input type="text" placeholder="Pesquisar CNPJ..." 
 		         class="px-2 py-1 border border-gray-300 rounded-l-md text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
 		         id="searchCNPJ" name="searchCNPJ" />
 		  <button class="px-3 py-1 bg-blue-600 text-white rounded-r-md text-sm hover:bg-blue-700 transition-colors">
 		    Pesquisar
 		  </button>
+  	</form>
 		</div>
 
 

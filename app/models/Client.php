@@ -46,4 +46,12 @@ class Client extends Model
         SqliteDb::getDb();
         db()->delete('clients')->where('id', $id)->execute();
     }
+
+   public static function search($cnpj){
+        SqliteDb::getDb();
+        $client = db()->select('clients')->where('cnpj', $cnpj)->first();
+        return $client ?: null;
+    }
+
+
 }
