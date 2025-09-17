@@ -65,6 +65,11 @@
                                 Campos Opcionais
                         </button>
                         <div id="optionalContent" class="mt-4 max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="grid grid-cols-1 mb-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">CNPJ/CPF</label>
+                                <input type="text" id="cnpj" name="cnpj" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Ex: 18820691000135"/>
+                            </div>
+
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Loja</label>
@@ -82,12 +87,9 @@
                                     <input type="text" id="nomefantasia" name="nomefantasia" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Ex: CPS"/>
                                 </div>
                             </div>
-
                             <div class="grid grid-cols-1 mb-6">
-                                <label class="block text-sm font-medium text-gray-700 mb-1">CNPJ</label>
-                                <input type="text" id="cnpj" name="cnpj" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Ex: 18820691000135"/>
+                                <hr>
                             </div>
-
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">CEP</label>
@@ -114,6 +116,9 @@
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Endereço</label>
                                     <input type="text" id="endereco" name="endereco" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Ex: RUA DA CPS"/>
                                 </div>
+                            </div>
+                            <div class="grid grid-cols-1 mb-6">
+                                <hr>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
