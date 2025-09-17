@@ -124,4 +124,34 @@ class ClientsController extends Controller
         if ($id) Client::destroy($id);
         $this->list();
     }
+
+   public function searchByCNPJ()
+    {
+        $cnpj = request()->get('searchCNPJ');
+
+        if(!$cnpj) {
+            return response()->view('list', [
+                'partialListClients' => [],
+            ]);
+        }
+
+        $client = Client::search($cnpj);
+
+        response()->view('list', [
+            'partialListClients' => $client 
+                ? [$client] 
+                : [[
+                    'code' => '-',
+                    'business_name' => '-',
+                    'type' => '-',
+                    'city' => '-',
+                    'phone' => '-',
+                    'email' => '-',
+                    'homepage' => '-',
+                    'cnpj' => '-'
+                ]],
+        ]);
+
+    }
+
 }
