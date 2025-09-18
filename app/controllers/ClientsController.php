@@ -83,6 +83,7 @@ class ClientsController extends Controller
             'purpose'      => $purpose,
             'country'      => $country
         ])->execute();
+        Client::sendEmail($code, $corporate, $openingDate);
         $this->index();
     }
 

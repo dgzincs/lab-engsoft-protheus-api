@@ -1,5 +1,7 @@
 <?php
 namespace App\Models;
+use PHPMailer\PHPMailer\PHPMailer;
+use Leaf\Mailer\Mailer;
 
 class Client extends Model
 {
@@ -53,5 +55,44 @@ class Client extends Model
         return $client ?: null;
     }
 
+    public static function sendEmail($code, $business_name, $opening_date) {
+        mailer()->connect([
+            'host' => 'smtp.ethereal.email',
+            'port' => 587,
+            'auth' => [
+                'username' => 'christelle.schmeler@ethereal.email',
+                'password' => 'Fbv88XRZVYQcT9aN9k'
+            ],
+            'debug' => 0,
+            'charset' => 'UTF-8',
+            'encoding' => 'base64' 
+        ]);
+
+        $mail = mailer()->create([
+            'subject' => 'Novo usuário cadastrado',
+            'body' => "
+                <html>
+                  <body style='font-family: Arial, sans-serif; color: #333;'>
+                    <div style='border-left: 5px solid #2F855A; padding: 10px;'>
+                        <h2 style='color: #2F855A; margin-bottom: 10px;'>Novo usuário cadastrado!</h2>
+                        <p><strong>Código:</strong> {$code}</p>
+                        <p><strong>Razão Social:</strong> {$business_name}</p>
+                        <p><strong>Data de Abertura:</strong> {$opening_date}</p>
+                        <hr style='border: none; border-top: 1px solid #ccc; margin: 10px 0;'>
+                        <p style='font-size: 12px; color: #666;'>Este é um e-mail automático do MicroSAP.</p>
+                    </div>
+                  </body>
+                </html>
+            ",
+            'isHTML' => true,
+            'recipientEmail' => 'christelle.schmeler@ethereal.email',
+            'recipientName' => 'Christelle Schmeler',
+            'senderEmail' => 'christelle.schmeler@ethereal.email',
+            'senderName' => 'Sistema MicroSAP',
+            'charset' => 'UTF-8',
+            'encoding'=> 'base64'
+        ]);
+        $mail->send();
+    }
 
 }
